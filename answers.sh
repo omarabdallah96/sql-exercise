@@ -32,3 +32,14 @@ SET Graduation = "08/09/2018";
 #3.Remove Layal's record from students
 DELETE FROM students 
 WHERE Name="Layal";
+
+#join table
+1-SELECT e.Name,e.Company,Date 
+FROM employees as e JOIN companies as c on e.Company = c.Name;
+2-SELECT employees.Name 
+FROM employees JOIN companies on Date<2000 AND employees.Company = companies.Name;
+3-SELECT Company FROM employees WHERE Role like 'Graphic Designer'
+GROUP by Company HAVING employees.Company in(
+	                                         SELECT name 
+											 FROM companies);
+4-
