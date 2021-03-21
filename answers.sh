@@ -42,4 +42,18 @@ FROM employees JOIN companies on Date<2000 AND employees.Company = companies.Nam
 GROUP by Company HAVING employees.Company in(
 	                                         SELECT name 
 											 FROM companies);
-4-
+#count
+1-SELECT Name , MAX(Points) as largestPoints
+FROM students;
+2-SELECT AVG(Points) as averagePoints
+FROM students;
+3-SELECT count(Name) 
+FROM students 
+WHERE Points ="500";
+4-SELECT Name 
+From students 
+WHERE Name like "%s%";
+5-SELECT Name, Points 
+FROM students 
+order by Points
+DESC;
